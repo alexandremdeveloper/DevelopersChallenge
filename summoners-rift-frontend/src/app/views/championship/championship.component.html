@@ -1,1 +1,18 @@
-<p>championship works!</p>
+<h1>Campeonatos em andamento:</h1>
+
+
+<div *ngFor="let championship of championships">
+    <td>{{championship.teamA}}</td>
+    <td>{{championship.teamB}}</td>
+    <td>{{championship.teamC}}</td>
+    <td>{{championship.teamD}}</td>
+</div>
+
+<!-- <table class="table col-4">
+    <tr *ngFor="let championships of championship">
+        <td>{{championships.teamA}}</td>
+        <td>{{championships.teamB}}</td>
+        <td>{{championships.teamC}}</td>
+        <td>{{championships.teamD}}</td>
+    </tr>
+</table> -->

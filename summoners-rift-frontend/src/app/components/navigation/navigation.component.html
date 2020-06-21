@@ -1,1 +1,19 @@
-<p>navigation works!</p>
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened
+    fixedInViewPort="true" fixedToGap="64" >
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <p>Home</p>
+            </a>
+            <a mat-list-item routerLink="/register">
+                <p>Cadastro</p>
+            </a>
+            <a mat-list-item routerLink="/championship">
+                <p>Campeonato</p>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
