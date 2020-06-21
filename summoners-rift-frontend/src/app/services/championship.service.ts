@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Championship } from '../models/championship.model';
+import { Team } from '../models/teams.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ChampionshipComponent } from '../views/championship/championship.component';
@@ -17,7 +18,9 @@ export class ChampionshipService {
     teamD: ''
   }
 
-  baseUrl = "http://localhost:3001/championship"
+  
+
+  baseUrl = "http://localhost:3000/championship"
 
 
   constructor(
@@ -29,8 +32,18 @@ export class ChampionshipService {
     return this.http.get<Championship[]>(this.baseUrl)
   }
 
+  getAllTeams(): Observable<Team[]> {
+    return this.http.get<Team[]>(this.baseUrl)
+  }
+
   create(championship: Championship): Observable<Championship> {
     return this.http.post<Championship>(this.baseUrl, championship)
+  }
+
+
+  update(championship: Championship): Observable<Championship> {
+    const url = `${this.baseUrl}/${this.championship.id}`
+    return this.http.put<Championship>(url, championship)
   }
 
   showMessage(msg: string): void {

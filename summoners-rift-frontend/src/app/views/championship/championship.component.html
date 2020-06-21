@@ -1,18 +1,92 @@
-<h1>Campeonatos em andamento:</h1>
+<div class="container">
+  <h1>Campeonatos em andamento:</h1>
+  <div class="championship-bracket-rounded">
+    <div class="championship-bracket-round">
+      <h3 class="championship-bracket-title">Etapa 1</h3>
+      <ul class="championship-bracket-list" *ngFor="let championship of championships">
+        <li class="championship-bracket-item">
+          <div class="championship-bracket-team">
+            <p>{{championship.teamA}}</p>
+          </div>
+          <div class="championship-bracket-team">
+            <p>{{championship.teamB}}</p>
+          </div>
+        </li>
+      </ul>
+      <hr>
+      <ul class="championship-bracket-list" *ngFor="let championship of championships">
+        <li class="championship-bracket-item">
+          <div class="championship-bracket-team">
+            <p>{{championship.teamC}}</p>
+          </div>
+          <div class="championship-bracket-team">
+            <p>{{championship.teamD}}</p>
+          </div>
+        </li>
+      </ul>
 
+    </div>
 
-<div *ngFor="let championship of championships">
-    <td>{{championship.teamA}}</td>
-    <td>{{championship.teamB}}</td>
-    <td>{{championship.teamC}}</td>
-    <td>{{championship.teamD}}</td>
+    <div class="championship-bracket-round select-team">
+      <h3 class="championship-bracket-title">Etapa 2</h3>
+      <div class="select-boxes">
+        <form class="form-group device-form" teamForm="ngForm" >
+
+          <select
+            class="select-device"
+            name="teamName"
+            [(ngModel)]="selectedTeam"
+            required
+            (change)="selectNameTeam()"
+          >
+            <option value="" disabled>Selecione o time</option>
+            <option *ngFor="let teamName of teamList" ngValue="">
+              {{ teamName }}
+            </option>
+          </select>
+        </form>
+        <!-- <mat-card>
+          <form [formGroup]="form" (submit)="getTeams()">
+            <mat-form-field>
+              <mat-label>Selecione o time vencedor da partida</mat-label>
+              <mat-select formControlName="teams" id="teams">
+                <mat-options *ngFor="let team of teams" [value]="team">
+                  {{ team }}
+                </mat-options>
+              </mat-select>
+            </mat-form-field>
+          </form>
+        </mat-card> -->
+        <!-- <select [(ngModel)]="championships" (change)="getChampionship()" class="custom-select vl-dropdown large">>
+          <option value="" [disabled]="true">Selecione o time que ganhou a partida anterior</option>
+          <option *ngFor="let championship of championships" [value]="championships">
+            {{ championships}}
+          </option>
+        </select>
+      </hr>
+        <select [(ngModel)]="selectedTeam" (change)="getTeams()" class="custom-select vl-dropdown large">>
+          <option value="" [disabled]="true">Selecione o time que ganhou a partida anterior</option>
+          <option *ngFor="let names of names" [value]="names.name">
+            {{ names.teamC }}
+            {{ names.teamD }}
+          </option>
+        </select> -->
+      </div>
+    </div>
+
+    <div class="championship-bracket-round">
+      <h3 class="championship-bracket-title">A grande final</h3>
+      <div class="select-boxes">
+        <!-- <select [(ngModel)]="selectedTeam" (change)="getTeams()" class="custom-select vl-dropdown large">>
+          <option value="" [disabled]="true">Selecione o time que ganhou a partida anterior</option>
+          <option *ngFor="let names of names" [value]="names.name">
+            {{ names.teamA }}
+            {{ names.teamB }}
+            {{ names.teamC }}
+            {{ names.teamD }}
+          </option>
+        </select> -->
+      </div>
+    </div>
+  </div>
 </div>
-
-<!-- <table class="table col-4">
-    <tr *ngFor="let championships of championship">
-        <td>{{championships.teamA}}</td>
-        <td>{{championships.teamB}}</td>
-        <td>{{championships.teamC}}</td>
-        <td>{{championships.teamD}}</td>
-    </tr>
-</table> -->

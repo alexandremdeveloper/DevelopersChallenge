@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #9e9e9e;
+}
+
+h1 { 
+  font-size: 2rem; 
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  text-align: center;
+  margin-top: 2%;
+}
+
+h2 { 
+  font-size: 1.4rem; 
+  font-weight: 600;
+   margin-bottom: 2em;
+}
+
+.championship-bracket-rounded {
+  display: flex;
+  justify-content: space-around;
+}
+
+.championship-bracket-title {
+  color: #9e9e9e;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+.championship-bracket-list {
+  flex-direction: column;
+}
+
+.championship-bracket-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.championship-bracket-teams {
+  font-size: 0.95rem;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.select-team, .select-boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-boxes {
+  margin-top: 20%;
+}
+
+.vl-dropdown {
+  width: 200px;
+  border: 1px solid #E3E4E4;
+  font-size: 14px;
+  color: #C7C8C9;
+  background-color: #FFF;
+  letter-spacing: 1px;
+  font-weight: 100;
+  border-radius: 0px;
+  height: 35px;
+  text-transform: capitalize;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.championship-bracket-team {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 3px;
+  color: #212121;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  min-height: 40px;
+  min-width: 200px;
+}

@@ -5,9 +5,6 @@ import { HomeComponent } from './views/home/home.component';
 import { ChampionshipComponent } from './views/championship/championship.component';
 import { RegisterComponent } from './views/register/register.component';
 
-
-
-
 const routes: Routes = [
   {
   path: "",
