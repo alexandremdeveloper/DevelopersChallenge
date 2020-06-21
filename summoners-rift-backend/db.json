@@ -1,0 +1,25 @@
+{
+    "championship": [
+      {
+        "id": 1,
+        "teamA": "Time 1",
+        "teamB": "Time 2",
+        "teamC": "Time 3",
+        "teamD": "Time 4"
+      },
+      {
+        "id": 2,
+        "teamA": "Time 5",
+        "teamB": "Time 6",
+        "teamC": "Time 7",
+        "teamD": "Time 8"
+      },
+      {
+        "id": 3,
+        "teamA": "Time 9",
+        "teamB": "Time 10",
+        "teamC": "Time 11",
+        "teamD": "Time 12"
+      }
+    ]
+  }
