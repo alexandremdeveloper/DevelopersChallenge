@@ -1,18 +1,8 @@
 {
-  "championship": [
-    {
-      "teamA": "Time do Rafa",
-      "teamB": "Time do Evandro",
-      "teamC": "Time do Pedro",
-      "teamD": "Time do Eu",
-      "id": 2
-    },
-    {
-      "teamA": "Ale",
-      "teamB": "Alex",
-      "teamC": "Alessandro",
-      "teamD": "Alexandre",
-      "id": 3
-    }
-  ]
+  "championships": [{
+    "id" : 1,
+    "teamList": ["Itacuruça", "Grussai", "Campos", "Campo Grande"],
+    "final": ["Itacuruça", "Campo Grande"],
+    "winner": "Campo Grande"
+  }]
 }
