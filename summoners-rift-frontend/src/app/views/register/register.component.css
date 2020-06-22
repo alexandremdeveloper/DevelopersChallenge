@@ -2,3 +2,16 @@ form {
     display: flex;
     flex-direction: column ;
 }
+.card-register {
+    display: flex;
+    justify-content: center;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.message {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}

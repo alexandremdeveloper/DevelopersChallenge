@@ -11,28 +11,17 @@ import { Championship } from '../../models/championship.model';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  // createChampionshipForm: FormGroup;
 
-  championship: Championship = {
-    teamA: '',
-    teamB: '',
-    teamC: '',
-    teamD: ''
+  public championship: Championship = {
+    teamlist: [],
+    final: [],
+    winner: ''
   }
 
   constructor(
     private championshipService: ChampionshipService,
-    // private formBuilder: FormBuilder,
     private router: Router
-  ) { 
-    // this.createChampionshipForm = formBuilder.group({
-    //   id: [0],
-    //   teamA: ["", Validators.required],
-    //   teamB: ["", Validators.required],
-    //   teamC: ["", Validators.required],
-    //   teamD: ["", Validators.required],
-    // })
-    }
+  ) { }
 
   ngOnInit(): void {
     

@@ -47,6 +47,10 @@ h2 {
   margin-top: 0.5em;
 }
 
+.card-teams {
+  margin-top: 120px;
+}
+
 .select-team, .select-boxes {
   display: flex;
   flex-direction: column;

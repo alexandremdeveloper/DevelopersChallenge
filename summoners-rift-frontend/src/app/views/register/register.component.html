@@ -1,24 +1,33 @@
-<mat-card>
-    <mat-card-title>Criar um novo campeonato</mat-card-title>
-    <h2>Lembre-se: Ao preencher os campos, verificar os times que irão se desafiar</h2><br>
-    <h2>Time 1 x Time 2</h2><br>
-    <h2>Time 3 x Time 4</h2>
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="TIME 1" [(ngModel)]="championship.teamA" name="teamA">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="TIME 2" [(ngModel)]="championship.teamB" name="teamB">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="TIME 3" [(ngModel)]="championship.teamC" name="teamC">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="TIME 4" [(ngModel)]="championship.teamD" name="teamC">
-        </mat-form-field>
-    </form>
+<div class="card-register">
+    <mat-card>
+        <mat-card-title>Criar um novo campeonato</mat-card-title>
+        
+        <mat-card class="message">
+        <h2>Isso aí jogador, você está a um passo de começar o campeonato, cadastre-se e se divirta!!!<br>Lembre-se, ao cadastrar você deve lembrar de quem vai duelar, por exemplo:</h2><br>
+        <h2>Time 1 x Time 2</h2><br>
+        <h2>Time 3 x Time 4</h2>
+        </mat-card>
+            
+        <!-- <form>
+            <mat-form-field>
+                <input matInput placeholder="TIME 1" [(ngModel)]="championship" name="teamList">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="TIME 2" [(ngModel)]="championship" name="teamList">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="TIME 3" [(ngModel)]="championship" name="teamList">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="TIME 4" [(ngModel)]="championship" name="teamList">
+            </mat-form-field>
+        </form> -->
 
-    <button mat-raised-button (click)="createChampionship()">
-        Salvar
-    </button>
-</mat-card>
+        <div class="button-group">
+            <button mat-raised-button (click)="createChampionship()">
+                Salvar
+            </button>
+        </div>
+    </mat-card>
+    
+</div>
