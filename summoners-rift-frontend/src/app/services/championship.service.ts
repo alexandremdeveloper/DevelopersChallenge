@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 
 export class ChampionshipService {
   public championship: Championship = {
-    teamlist: [],
+    teamList: [],
     final: [],
     winner: ''
   }

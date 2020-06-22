@@ -13,7 +13,7 @@ import { Championship } from '../../models/championship.model';
 export class RegisterComponent implements OnInit {
 
   public championship: Championship = {
-    teamlist: [],
+    teamList: [],
     final: [],
     winner: ''
   }
@@ -30,6 +30,7 @@ export class RegisterComponent implements OnInit {
   createChampionship() {
       this.championshipService.create(this.championship).subscribe(() => {
         this.championshipService.showMessage('Campeonato cadastrado');
+        console.log(this.championship)
         this.router.navigate(['/championship']);
       })
   }

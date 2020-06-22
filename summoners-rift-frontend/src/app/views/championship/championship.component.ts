@@ -14,7 +14,9 @@ import { FormControl, FormGroup, FormControlName, Validators, FormBuilder} from 
 export class ChampionshipComponent implements OnInit {
   public championships: Championship[];
   public teamList: any = [];
-  public selectedTeam = 'Selecione o time';  
+  public selectedTeam = '';
+
+  teamForm: FormGroup;
 
   constructor(
     private router: Router,
@@ -24,21 +26,24 @@ export class ChampionshipComponent implements OnInit {
 
   ngOnInit(): void {
     this.getChampionship();
-    // this.getTeams()
+    this.getTeams()
+
+    this.teamForm = new FormGroup({
+      'teamList': new FormControl(null, {validators: [Validators.required]})
+    });
   }
-
-
-  // getTeams() {
-  //   this.championshipService.getAllChampionship().subscribe(teamList => {
-  //     this.teamList = teamList
-  //     console.log(teamList)
-  //   })
-  // }
 
   getChampionship() {
     this.championshipService.getAllChampionship().subscribe(championships => {
       this.championships = championships;
       console.log(championships)
+    })
+  }
+
+  getTeams() {
+    this.championshipService.getAllChampionship().subscribe(response => {
+      this.teamList = this.teamList.teamList
+      console.log(response)
     })
   }
 }

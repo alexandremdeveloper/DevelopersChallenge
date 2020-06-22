@@ -30,48 +30,49 @@
     <div class="championship-bracket-round select-team">
       <h3 class="championship-bracket-title">Etapa 2</h3>
       <div class="select-boxes">
-        <!-- <mat-card>
+        <mat-card>
           <form [formGroup]="teamForm" (submit)="getTeams()">
             <mat-form-field>
-              <mat-label>Selecione o time vencedor da partida</mat-label>
-              <mat-select formControlName="teams" id="teams">
-                <mat-options *ngFor="let teams of teamList" [value]="teams">
-                  {{ teams }}
-                </mat-options>
+              <mat-label>Selecione um time</mat-label>
+              <mat-select formControlName="teamList">
+                <mat-option *ngFor="let championship of championships" [value]="teamList" >
+                  <mat-option>{{ championship.teamList }}</mat-option>
+                </mat-option>
               </mat-select>
-            </mat-form-field>
+            </mat-form-field><br/>
           </form>
-        </mat-card> -->
-        <!-- <mat-card class="card-teams">
+        </mat-card>
+        <hr>
+        <mat-card>
           <form [formGroup]="teamForm" (submit)="getTeams()">
             <mat-form-field>
-              <mat-label>Selecione o time vencedor da partida</mat-label>
-              <mat-select formControlName="teams" id="teams">
-                <mat-options *ngFor="let teams of teamList" [value]="teams">
-                  {{ teams }}
-                </mat-options>
+              <mat-label>Selecione um time</mat-label>
+              <mat-select formControlName="teamList">
+                <mat-option *ngFor="let championship of championships" [value]="teamList" >
+                  <mat-option>{{ championship.teamList }}</mat-option>
+                </mat-option>
               </mat-select>
-            </mat-form-field>
+            </mat-form-field><br/>
           </form>
-        </mat-card> -->
+        </mat-card>
       </div>
     </div>
 
     <div class="championship-bracket-round">
       <h3 class="championship-bracket-title">A grande final</h3>
-      <div class="select-boxes">
-        <!-- <mat-card class="card-teams">
+      <div class="select-boxes final-winner">
+        <mat-card>
           <form [formGroup]="teamForm" (submit)="getTeams()">
             <mat-form-field>
-              <mat-label>Selecione o time vencedor da partida</mat-label>
-              <mat-select formControlName="teams" id="teams">
-                <mat-options *ngFor="let teams of teamList" [value]="teams">
-                  {{ teams }}
-                </mat-options>
+              <mat-label>Selecione um time</mat-label>
+              <mat-select formControlName="teamList">
+                <mat-option *ngFor="let championship of championships" [value]="teamList" >
+                  <mat-option>{{ championship.teamList }}</mat-option>
+                </mat-option>
               </mat-select>
-            </mat-form-field>
+            </mat-form-field><br/>
           </form>
-        </mat-card> -->
+        </mat-card>
       </div>
     </div>
   </div>

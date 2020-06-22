@@ -1,6 +1,6 @@
 export interface Championship {
     id?: string,
-    teamlist: string[];
+    teamList: string[];
     final: string[];
     winner: string
 }
